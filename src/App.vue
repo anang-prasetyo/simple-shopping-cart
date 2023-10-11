@@ -177,34 +177,34 @@ onMounted(() => {
       </div>
       <div class="d-flex flex-column align-items-center justify-content-end s2">
         <div class="row d-flex w-100 text-center gap-1 p-1 h-100">
-          <button v-if="!displayCalc" @click="resetAllCalc()" class="col d-flex align-items-center justify-content-center button-grey rounded-circle btn fs-3">AC</button>
-          <button v-else @click="resetCalc()" class="col d-flex align-items-center justify-content-center button-grey rounded-circle btn fs-3">C</button>
-          <button class="col d-flex align-items-center justify-content-center button-grey rounded-circle btn fs-1 fw-bold" @click="displayCalc = displayCalc.slice(0, -1)"><i class="bi bi-arrow-left-short"></i></button>
-          <button class="col d-flex align-items-center justify-content-center rounded-circle btn fs-3" @click="addToCalculate(), operation = '%', myPromt = 'Now type the discount'" :class="readyToCalc && operation == '%' ? 'btn-dark' : 'button-grey'">%</button>
-          <button class="col d-flex align-items-center justify-content-center rounded-circle btn fs-1" :class="readyToCalc && operation == '/' ? 'btn -dark' : 'button-warning'" @click="addToCalculate(), operation = '/'">&divide;</button>
+          <button v-if="!displayCalc" @click="resetAllCalc()" class="col d-flex btn-h align-items-center justify-content-center button-grey rounded-circle btn fs-3">AC</button>
+          <button v-else @click="resetCalc()" class="col d-flex btn-h align-items-center justify-content-center button-grey rounded-circle btn fs-3">C</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-grey rounded-circle btn fs-1 fw-bold" @click="displayCalc = displayCalc.slice(0, -1)"><i class="bi bi-arrow-left-short"></i></button>
+          <button class="col d-flex btn-h align-items-center justify-content-center rounded-circle btn fs-3" @click="addToCalculate(), operation = '%', myPromt = 'Now type the discount'" :class="readyToCalc && operation == '%' ? 'btn-dark' : 'button-grey'">%</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center rounded-circle btn fs-1" :class="readyToCalc && operation == '/' ? 'btn -dark' : 'button-warning'" @click="addToCalculate(), operation = '/'">&divide;</button>
         </div>
         <div class="row d-flex w-100 text-center gap-1 p-1 h-100">
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(7)">7</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(8)">8</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(9)">9</button>
-          <button class="col d-flex align-items-center justify-content-center rounded-circle btn fs-3 fs-3" @click="addToCalculate(), operation = '*'" :class="readyToCalc && operation == '*' ? 'btn-dark' : 'button-warning'">x</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(7)">7</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(8)">8</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(9)">9</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center rounded-circle btn fs-3 fs-3" @click="addToCalculate(), operation = '*'" :class="readyToCalc && operation == '*' ? 'btn-dark' : 'button-warning'">x</button>
         </div>
         <div class="row d-flex w-100 text-center gap-1 p-1 h-100">
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(4)">4</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(5)">5</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(6)">6</button>
-          <button class="col d-flex align-items-center justify-content-center rounded-circle btn fs-3" @click="addToCalculate(), operation = '-'" :class="readyToCalc && operation == '-' ? 'btn-dark' : 'button-warning'">&minus;</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(4)">4</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(5)">5</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(6)">6</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center rounded-circle btn fs-3" @click="addToCalculate(), operation = '-'" :class="readyToCalc && operation == '-' ? 'btn-dark' : 'button-warning'">&minus;</button>
         </div>
         <div class="row d-flex w-100 text-center gap-1 p-1 h-100">
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(1)">1</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(2)">2</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(3)">3</button>
-          <button class="col d-flex align-items-center justify-content-center rounded-circle btn fs-3" @click="addToCalculate(), operation = '+'" :class="readyToCalc && operation == '+' ? 'btn-dark' : 'button-warning'">+</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(1)">1</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(2)">2</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-3" @click="addToDisplayCalc(3)">3</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center rounded-circle btn fs-3" @click="addToCalculate(), operation = '+'" :class="readyToCalc && operation == '+' ? 'btn-dark' : 'button-warning'">+</button>
         </div>
         <div class="row d-flex w-100 text-center gap-1 p-1 h-100">
-          <button class="col-6 d-flex align-items-center justify-content-center button-light rounded-pill btn fs-3" @click="addToDisplayCalc(0)">0</button>
-          <button class="col d-flex align-items-center justify-content-center button-light rounded-circle btn fs-2">,</button>
-          <button class="col d-flex align-items-center justify-content-center button-warning rounded-circle btn fs-3" @click="getResultCalc(operation)">=</button>
+          <button class="col-6 d-flex btn-h align-items-center justify-content-center button-light rounded-pill btn fs-3" @click="addToDisplayCalc(0)">0</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-light rounded-circle btn fs-2">,</button>
+          <button class="col d-flex btn-h align-items-center justify-content-center button-warning rounded-circle btn fs-3" @click="getResultCalc(operation)">=</button>
         </div>
       </div>
     </section>
@@ -249,6 +249,9 @@ onMounted(() => {
   height: 100%;
   // height: var(--btn-size);
 }
+.btn-h{
+  height: calc((100vw / 4) - 1rem);
+}
 .btn-round{
   width: 100%;
   // width: var(--btn-size);
@@ -258,7 +261,7 @@ onMounted(() => {
 }
 .s2{
   width: 100%;
-  height: 55vh;
+  // height: 55vh;
 }
 @media (min-width: 576px) { 
   .s1{
@@ -268,6 +271,9 @@ onMounted(() => {
   .s2{
     min-height: 73vh;
     width: 25vw;
+  }
+  .btn-h{
+    height: auto;
   }
   // .btn-round, .btn-pill{
   //   --btn-gap: 1rem;
