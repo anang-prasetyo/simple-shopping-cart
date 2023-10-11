@@ -173,7 +173,7 @@ onMounted(() => {
       <div v-else style="display: block; min-height: 24px;"></div>
       <div class="p-3 w-100">
         <div v-if="isSubTotal" class="display-1 w-100 text-center">{{ subTotal }}</div>
-        <input v-else style="display: block; min-height: 53.54px;" type="text" v-model="displayCalc" class="input-my-2 display-1 w-100">
+        <input v-else id="mainNumb" style="display: block; min-height: 53.54px;" type="text" disabled v-model="displayCalc" class="input-my-2 display-1 w-100">
       </div>
       <div class="d-flex flex-column align-items-center justify-content-end s2">
         <div class="row d-flex w-100 text-center gap-1 p-1 h-100">
@@ -250,7 +250,7 @@ onMounted(() => {
   // height: var(--btn-size);
 }
 .btn-h{
-  height: calc((100vw / 4) - 1rem);
+  height: calc((100vw / 4) - .75rem);
 }
 .btn-round{
   width: 100%;
@@ -262,6 +262,9 @@ onMounted(() => {
 .s2{
   width: 100%;
   // height: 55vh;
+}
+#mainNumb:disabled{
+  background-color: transparent;
 }
 @media (min-width: 576px) { 
   .s1{
